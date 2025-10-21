@@ -41,8 +41,8 @@ void deleteMat(int **arr, int col)
 
 int main(int argc, char* argv[])
 {
-   int x = std::atoi(argv[1]);  
-   int y = std::atoi(argv[2]);
+   int x = parsechartoint(argv[1]);  
+   int y = parsechartoint(argv[2]);
 
    int col = x;
    int row = y;

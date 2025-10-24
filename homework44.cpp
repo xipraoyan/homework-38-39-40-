@@ -4,20 +4,21 @@
 class Car 
 {
     private:
-    m_std::string name;
-    m_std::string engine;
-    m_std::string colour;
-    m_int year;
-    m_int price;
+    std::string m_name;
+    std::string m_engine;
+    std::string m_colour;
+    int m_year;
+    int m_price;
 
     public:
-       void init(const std::string& name, const std::string& engine, const std::string& colour, int year, int price)
+
+       Car(const std::string& name, const std::string& engine, const std::string& colour, int year, int price)
     {
-        m_name = name;
-        m_engine = engine;
-        m_colour = colour;
-        m_year = year;
-        m_price = ptice;
+        m_name = name; 
+        m_engine = engine; 
+        m_colour = colour; 
+        m_year = year; 
+        m_price = price;
     }
 
     public:
@@ -35,8 +36,7 @@ class Car
 
 int main(int argc, char* argv[])
 {
-    Car Mercedes;
-    Mercedes.init("E190", "6-cylinder gasoline", "blue", 1990, 7500);
+    Car Mercedes("E190", "6-cylinder gasoline", "blue", 1990, 7500);
 
     Mercedes.print();
 

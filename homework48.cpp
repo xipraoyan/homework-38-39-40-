@@ -33,6 +33,15 @@ class Matrix
           std::cout << std::endl;
         }
     }
+
+    ~Matrix()
+    {
+        for (int i = 0; i < m_col; ++i) 
+        {
+            delete [] m_arr[i];
+        }
+        delete [] m_arr;
+    }
 };
 
 int main(int argc, char* argv[])

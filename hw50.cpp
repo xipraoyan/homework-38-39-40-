@@ -27,7 +27,7 @@ class Matrix
     
     }
 
-    void Method()
+    void turnMatrix()
     {
         int k;
         for(int i = 0; i < m_col; i++)

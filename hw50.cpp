@@ -27,7 +27,7 @@ class Matrix
     
     }
 
-    void print()
+    void Method()
     {
         int k;
         for(int i = 0; i < m_col; i++)
@@ -49,7 +49,10 @@ class Matrix
               m_arr[m_col - j - 1][m_row - i - 1] = k;
             }
         }
+    }
 
+    void print()
+    {
 
         for (int i = 0; i < m_col; i++)
         {
@@ -75,6 +78,7 @@ int main(int argc, char* argv[])
 {
     Matrix a(4, 4);
     std::cout << std::endl;
+    a.Method();
     a.print();
 
     return 0;

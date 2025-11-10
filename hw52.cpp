@@ -43,6 +43,7 @@ class Matrix
 
   Matrix& operator = (const Matrix& other)
   {
+    
     if(this != &other)
     {
       this -> m_row = other.m_row;
@@ -73,9 +74,10 @@ class Matrix
     return *this;
   }
 
-  Matrix& operator ++ (int)
+  Matrix operator ++ (int)
   {
     Matrix temp (*this);
+    
     for(int i = 0; i < m_col; i++)
     {
       for(int j = 0; j < m_row; j++)
@@ -83,7 +85,7 @@ class Matrix
         ++this -> m_arr[i][j];
       }
     }
-    return *this;
+    return temp;
   }
 
   void print()
@@ -122,6 +124,9 @@ int main(int argc, char* argv[])
   Matrix c(a);
   c = a++;
   c.print();
+  
+  std::cout << std::endl;
+  a.print();
 
   return 0;
 }

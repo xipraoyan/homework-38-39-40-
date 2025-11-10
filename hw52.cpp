@@ -121,10 +121,13 @@ int main(int argc, char* argv[])
   b.print();
   std::cout << std::endl;
 
+  a.print();
+  std::cout << std::endl;
+
   Matrix c(a);
   c = a++;
   c.print();
-  
+
   std::cout << std::endl;
   a.print();
 

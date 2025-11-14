@@ -97,6 +97,8 @@ int main(int argc, char* argv[])
     b.print();
     std::cout << std::endl;
     m.print();
+
+    return 0;
 }
 
 

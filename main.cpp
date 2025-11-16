@@ -1,16 +1,13 @@
-#include "Car.h"
+#include "Zoo.h"
 
-int main()
+int main(int argc, char* argv[])
 {
-    Toyota t("Corolla", 4, 20000);
-    BMW b("M3", 4, 75000);
-    Mercedes m("E-Class", 4, 90000);
+    Zoo z(2);
 
-    t.print();
-    std::cout << std::endl;
-    b.print();
-    std::cout << std::endl;
-    m.print();
+    z.setAnimal(0, new Dog());
+    z.setAnimal(1, new Cow());
+
+    z.voice();
 
     return 0;
 }

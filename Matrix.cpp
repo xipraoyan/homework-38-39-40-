@@ -7,15 +7,14 @@
         m_row = b;
         
         m_arr = new int* [m_col];
-        for(int i = 0; i < m_col; i++)
+        for(int i = 1; i <= m_col; i++)
         {
            m_arr[i] = new int[m_row];
            for(int j = 0; j < m_row; j++)
            {
-               m_arr[i][j] = rand() % 10; 
+              m_arr[i][j] = 0;
            }
         } 
-    
     }
 
     Matrix::Matrix(const Matrix& other)
@@ -30,17 +29,14 @@
            for(int j = 0; j < m_row; j++)
            {
              m_arr[i][j] = other.m_arr[i][j];
-             std::cout << m_arr[i][j] << " ";
            }
-           std::cout << std::endl;
         }
     }
 
-    Matrix::Matrix& operator = (const Matrix& other) 
+    Matrix& Matrix::operator = (const Matrix& other) 
     {
         if(this != &other)
         {
-
             this -> m_row = other.m_row;
             this -> m_col = other.m_col;
 
@@ -51,12 +47,9 @@
                for(int j = 0; j < m_row; j++)
                {
                 m_arr[i][j] = other.m_arr[i][j];
-                std::cout << m_arr[i][j] << " ";
                }
-              std::cout << std::endl;
-            }  
+            }
         }
-
         return *this;
     }
 
@@ -67,4 +60,16 @@
             delete [] m_arr[i];
         }
         delete [] m_arr;
+    }
+
+    void Matrix::print()
+    {
+        for(int i = 0; i < m_col; i++)
+        {
+           for(int j = 0; j < m_row; j++)
+           {
+             std::cout << m_arr[i][j] << " ";
+           }
+           std::cout << std::endl;
+        }
     }

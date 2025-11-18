@@ -1,13 +1,12 @@
-#include "Zoo.h"
+#include "Matrix.h"
+#include <iostream>
 
 int main(int argc, char* argv[])
 {
-    Zoo z(2);
+    Matrix* ptr = new ChessBoard;
+    ptr -> print();
 
-    z.setAnimal(0, new Dog());
-    z.setAnimal(1, new Cow());
-
-    z.voice();
-
+    delete ptr;
+    
     return 0;
 }

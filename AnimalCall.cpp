@@ -1,4 +1,3 @@
-//AnimalCall.cpp//
 #include "Animal.h"
 #include <iostream>
 

@@ -1,4 +1,3 @@
-//Animal.cpp//
 #include "Animal.h"
 
 Animal::Animal(const std::string& type) : m_type(type)

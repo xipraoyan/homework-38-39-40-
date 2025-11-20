@@ -1,4 +1,3 @@
-//Animal.h//
 #ifndef ANIMAL_H
 #define ANIMAL_H
 
@@ -10,7 +9,6 @@ class Animal
 public:
     std::string m_type;
 
-    
     Animal(const Animal& other) = default;
     Animal& operator = (const Animal& other) = default;
 
@@ -18,7 +16,6 @@ public:
     virtual void voice() = 0;
 
     virtual ~Animal();
-
 };
 
 class Dog : public Animal
